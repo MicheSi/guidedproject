@@ -12,7 +12,6 @@ import javax.persistence.*;
 // It is customary to give the table an explicit name like this.
 // Notice how the table is plural and the class is singular. Another common practice.
 @Table(name = "cats")
-
 public class Cat {
     // In a database setting, each object must have a unique "primary key"
     // The Id annotation marks which field will serve as the primary key

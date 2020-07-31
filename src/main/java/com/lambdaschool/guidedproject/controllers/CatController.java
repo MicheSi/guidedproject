@@ -1,6 +1,8 @@
 package com.lambdaschool.guidedproject.controllers;
 
+import com.lambdaschool.guidedproject.repositories.CatRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,6 +23,6 @@ public class CatController {
     // The response includes an HTTP Status Code of OK
     @GetMapping(value = "/cats", produces = {"application/json"})
     public ResponseEntity<?> findAllCats() {
-        return new ResponseEntity<>(catRepos.findAll(), HTTPStatus.OK);
+        return new ResponseEntity<>(catRepos.findAll(), HttpStatus.OK);
     }
 }
