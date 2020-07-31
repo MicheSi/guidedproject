@@ -1,9 +1,12 @@
 package com.lambdaschool.guidedproject.config;
 
+import org.h2.tools.Server;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import java.sql.SQLException;
 
 /**
  * Configures H2 access through the JetBrains IntelliJ IDEA IDE.
